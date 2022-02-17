@@ -4,11 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SocionicsBackendApplication {
+public class SocionicsApplication {
 
     public static void main(String[] args) {
-        System.out.println("Test commit");
-        SpringApplication.run(SocionicsBackendApplication.class, args);
+        SpringApplication.run(SocionicsApplication.class, args);
     }
 
 }

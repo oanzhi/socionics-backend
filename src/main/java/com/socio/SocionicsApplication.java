@@ -9,5 +9,4 @@ public class SocionicsApplication {
     public static void main(String[] args) {
         SpringApplication.run(SocionicsApplication.class, args);
     }
-
 }

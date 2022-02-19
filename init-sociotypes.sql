@@ -1,0 +1,17 @@
+INSERT INTO sociotype (id, abbreviation, full_name) VALUES
+                                                           (1, 'ENTP', 'Inventor'),
+                                                           (2, 'ISFP', 'Peacemaker'),
+                                                           (3, 'ESFJ', 'Enthusiast'),
+                                                           (4, 'INTJ', 'Analyst'),
+                                                           (5, 'ENFJ', 'Actor'),
+                                                           (6, 'ISTJ', 'Pragmatist'),
+                                                           (7, 'ESTP', 'Conqueror'),
+                                                           (8, 'INFP', 'Romantic'),
+                                                           (9, 'ESFP', 'Ambassador'),
+                                                           (10, 'INTP', 'Observer'),
+                                                           (11, 'ENTJ', 'Pioneer'),
+                                                           (12, 'ISFJ', 'Guardian'),
+                                                           (13, 'ESTJ', 'Director'),
+                                                           (14, 'INFJ', 'Empath'),
+                                                           (15, 'ENFP', 'Reporter'),
+                                                           (16, 'ISTP', 'Artisan');

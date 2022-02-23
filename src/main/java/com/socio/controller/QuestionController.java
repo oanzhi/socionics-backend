@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-import static com.socio.common.Constants.QUESTION_COUNT;
+import static com.socio.common.Constants.COUNT;
 import static com.socio.common.Constants.QUESTION_ID;
 import static net.logstash.logback.argument.StructuredArguments.keyValue;
 
@@ -75,7 +75,7 @@ public class QuestionController {
 
   @GetMapping("/count/{count}")
   public ResponseEntity<List<QuestionResponse>> getRandomizedQuestionsByCount(@PathVariable Integer count) {
-    log.info("Getting randomized question {}", keyValue(QUESTION_COUNT, count));
+    log.info("Getting randomized question {}", keyValue(COUNT, count));
     var randomizedQuestion = questionService.getRandomizedQuestionList(count);
 
     return ResponseEntity.ok(randomizedQuestion);

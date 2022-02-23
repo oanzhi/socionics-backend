@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.socio.common.Constants.QUESTION_COUNT;
+import static com.socio.common.Constants.COUNT;
 import static com.socio.common.Constants.QUESTION_ID;
 import static net.logstash.logback.argument.StructuredArguments.keyValue;
 
@@ -46,7 +46,7 @@ public class QuestionService {
   }
 
   public List<QuestionResponse> getRandomizedQuestionList(int count) {
-    log.debug("Getting and randomizing question {}", keyValue(QUESTION_COUNT, count));
+    log.debug("Getting and randomizing question {}", keyValue(COUNT, count));
 
     var allQuestions = questionRepository.findAll();
     if (allQuestions.size() <= count) {
@@ -60,7 +60,7 @@ public class QuestionService {
         .collect(Collectors.toList());
 
     var idsToSelect = getRandomizedIdsFromList(questionIds, count);
-    return questionRepository.getAllByIdContaining(idsToSelect).stream()
+    return questionRepository.findAllByIdIn(idsToSelect).stream()
         .map(Question::toResponseDto)
         .collect(Collectors.toList());
   }

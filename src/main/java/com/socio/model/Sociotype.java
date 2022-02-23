@@ -11,13 +11,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "sociotype")
 public class Sociotype {
-    @Id
-    @Column(name = "id")
-    private Integer id;
+  @Id
+  @Column(name = "id")
+  private Integer id;
 
-    @Column(name = "abbreviation")
-    private String abbreviation;
+  @Column(name = "abbreviation")
+  private String abbreviation;
 
-    @Column(name = "full_name")
-    private String fullName;
+  @Column(name = "full_name")
+  private String fullName;
 }

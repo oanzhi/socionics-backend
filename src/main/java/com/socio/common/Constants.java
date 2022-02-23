@@ -6,5 +6,5 @@ import lombok.experimental.UtilityClass;
 public class Constants {
 
   public static final String QUESTION_ID = "questionId";
-  public static final String QUESTION_COUNT = "questionCount";
+  public static final String COUNT = "count";
 }

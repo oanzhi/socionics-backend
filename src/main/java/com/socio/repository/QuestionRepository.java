@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.Set;
 
 public interface QuestionRepository extends JpaRepository<Question, Integer> {
-  List<Question> getAllByIdContaining(Set<Integer> ids);
+  List<Question> findAllByIdIn(Set<Integer> ids);
 }

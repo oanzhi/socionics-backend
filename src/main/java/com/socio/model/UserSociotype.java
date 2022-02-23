@@ -23,6 +23,10 @@ public class UserSociotype {
   private double probability;
 
   @ManyToOne
+  @JoinColumn(name = "user_id", referencedColumnName = "id")
+  private User user;
+
+  @ManyToOne
   @JoinColumns({
       @JoinColumn(name = "sociotype_id", referencedColumnName = "id"),
       @JoinColumn(name = "sociotype_name", referencedColumnName = "full_name")

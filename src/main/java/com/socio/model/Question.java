@@ -8,7 +8,13 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @Data
@@ -18,27 +24,27 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 public class Question {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+  @Id
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
 
-    @Column(name = "text")
-    private String text;
+  @Column(name = "text")
+  private String text;
 
-    @LastModifiedDate
-    @Column(name = "modified_date")
-    private LocalDateTime modifiedDate;
+  @LastModifiedDate
+  @Column(name = "modified_date")
+  private LocalDateTime modifiedDate;
 
-    @CreatedDate
-    @Column(name = "creation_date")
-    private LocalDateTime creationDate;
+  @CreatedDate
+  @Column(name = "creation_date")
+  private LocalDateTime creationDate;
 
-    public Question(QuestionRequest questionRequest) {
-        this.text = questionRequest.getText();
-    }
+  public Question(QuestionRequest questionRequest) {
+    this.text = questionRequest.getText();
+  }
 
-    public QuestionResponse toResponseDto() {
-        return new QuestionResponse(this);
-    }
+  public QuestionResponse toResponseDto() {
+    return new QuestionResponse(this);
+  }
 }

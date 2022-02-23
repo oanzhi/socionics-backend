@@ -16,19 +16,19 @@ import java.time.LocalDateTime;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class QuestionResponse {
 
-    @Schema(description = "Question id")
-    private Integer id;
+  @Schema(description = "Question id")
+  private Integer id;
 
-    @Schema(description = "Question text")
-    private String text;
+  @Schema(description = "Question text")
+  private String text;
 
-    @Schema(description = "Local date time of question modifying", example = "2022-02-20T14:30:07.5053601")
-    private LocalDateTime modifiedDate;
+  @Schema(description = "Local date time of question modifying", example = "2022-02-20T14:30:07.5053601")
+  private LocalDateTime modifiedDate;
 
-    @Schema(description = "Local date time of question creating", example = "2022-02-20T14:30:07.5053601")
-    private LocalDateTime creationDate;
+  @Schema(description = "Local date time of question creating", example = "2022-02-20T14:30:07.5053601")
+  private LocalDateTime creationDate;
 
-    public QuestionResponse(Question question) {
-        BeanUtils.copyProperties(question, this);
-    }
+  public QuestionResponse(Question question) {
+    BeanUtils.copyProperties(question, this);
+  }
 }
